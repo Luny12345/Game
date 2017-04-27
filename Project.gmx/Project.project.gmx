@@ -9,6 +9,11 @@
     <sprites name="Pac-Man">
       <sprite>sprites\pacMan</sprite>
     </sprites>
+    <sprites name="space invaders">
+      <sprite>sprites\spr_player</sprite>
+      <sprite>sprites\spr_spaceship1</sprite>
+      <sprite>sprites\spr_player_move</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
