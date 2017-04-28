@@ -8,6 +8,8 @@
   <sprites name="sprites">
     <sprites name="Pac-Man">
       <sprite>sprites\pacMan</sprite>
+      <sprite>sprites\spr_collision</sprite>
+      <sprite>sprites\spr_debug</sprite>
     </sprites>
     <sprites name="space invaders">
       <sprite>sprites\spr_player</sprite>
@@ -19,6 +21,7 @@
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\obj_pacMan</object>
+    <object>objects\obj_collision</object>
   </objects>
   <rooms name="rooms">
     <rooms name="Games">

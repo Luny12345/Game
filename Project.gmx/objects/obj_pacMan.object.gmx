@@ -7,7 +7,247 @@
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
-  <events/>
+  <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>keyboardLeft = false;
+keyboardRight = false;
+keyboardDown = false;
+keyboardUp = false;
+
+spd = 3;
+
+lookingForEntranceLeft = false;
+lookingForEntranceRight = false;
+lookingForEntranceDown = false;
+lookingForEntranceUp = false;
+
+global.debug = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>lookingForEntranceLeft = false;
+lookingForEntranceRight = false;
+lookingForEntranceUp = false;
+lookingForEntranceDown = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (lookingForEntranceLeft){
+    if (!place_meeting(x-spd,y,obj_collision)){
+        direction = 180;
+        lookingForEntranceLeft = false;
+    }
+}
+if (lookingForEntranceRight){
+    if (!place_meeting(x+spd,y,obj_collision)){
+        direction = 0;
+        lookingForEntranceRight = false;
+    }
+}
+if (lookingForEntranceUp){
+    if (!place_meeting(x,y-spd,obj_collision)){
+        direction = 90;
+        lookingForEntranceUp = false;
+    }
+}
+if (lookingForEntranceDown){
+    if (!place_meeting(x,y+spd,obj_collision)){
+        direction = 270;
+        lookingForEntranceDown = false;
+    }
+}
+spd = 3;
+if (direction == 180){
+    if (place_meeting(x-spd,y,obj_collision)){
+        spd = 0;
+        if (!preciseCollision){
+            while(!place_meeting(x-1,y,obj_collision)){
+                x-=1;
+            }
+            preciseCollision = true;
+        }
+    }
+}else if(direction == 270){
+    if (place_meeting(x,y+spd,obj_collision)){
+        spd = 0;
+        if (!preciseCollision){
+            while(!place_meeting(x,y+1,obj_collision)){
+                y+=1;
+            }
+            preciseCollision = true;
+        }
+    }
+}else if(direction == 0){
+    if (place_meeting(x+spd,y,obj_collision)){
+        spd = 0;
+        if (!preciseCollision){
+            while(!place_meeting(x+1,y,obj_collision)){
+                x+=1;
+            }
+            preciseCollision = true;
+        }
+    }
+}else{
+    if (place_meeting(x,y-spd,obj_collision)){
+        spd = 0;
+        if (!preciseCollision){
+            while(!place_meeting(x,y-1,obj_collision)){
+                y-=1;
+            }
+            preciseCollision = true;
+        }
+    }
+}
+if (spd != 0){
+    preciseCollision = false;
+}
+image_angle = direction;
+speed = spd;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>keyboardLeft = keyboard_check(vk_left);
+keyboardRight = keyboard_check(vk_right);
+keyboardUp = keyboard_check(vk_up);
+keyboardDown = keyboard_check(vk_down);
+
+if (keyboard_check_pressed(vk_escape)){
+    if (global.debug){
+        global.debug = false;
+    }
+    else{
+        global.debug = true;
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (keyboardLeft){
+        lookingForEntranceLeft = true;
+        lookingForEntranceRight = false;
+        lookingForEntranceUp = false;
+        lookingForEntranceDown = false;
+        alarm[0] = room_speed;
+}
+if (keyboardRight){
+        lookingForEntranceLeft = false;
+        lookingForEntranceRight = true;
+        lookingForEntranceUp = false;
+        lookingForEntranceDown = false;
+        alarm[0] = room_speed;
+}
+if (keyboardUp){
+        lookingForEntranceLeft = false;
+        lookingForEntranceRight = false;
+        lookingForEntranceUp = true;
+        lookingForEntranceDown = false;
+        alarm[0] = room_speed;
+}
+if (keyboardDown){
+        lookingForEntranceLeft = false;
+        lookingForEntranceRight = false;
+        lookingForEntranceUp = false;
+        lookingForEntranceDown = true;
+        alarm[0] = room_speed;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </events>
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>0</PhysicsObjectShape>
