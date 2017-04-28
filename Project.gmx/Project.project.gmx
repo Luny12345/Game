@@ -16,20 +16,25 @@
       <sprite>sprites\spr_spaceship1</sprite>
       <sprite>sprites\spr_player_move</sprite>
       <sprite>sprites\spr_spaceship2</sprite>
+      <sprite>sprites\spr_space_invaders_laser</sprite>
     </sprites>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bkr_space_invaders</background>
+  </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\obj_pacMan</object>
     <object>objects\obj_collision</object>
     <object>objects\obj_space_invaders_player</object>
     <object>objects\obj_controller</object>
+    <object>objects\obj_laser</object>
+    <object>objects\obj_spaceship1</object>
   </objects>
   <rooms name="rooms">
     <rooms name="Games">
       <room>rooms\rm_pacMan</room>
-      <room>rooms\space_invaders</room>
+      <room>rooms\rm_space_invaders</room>
     </rooms>
   </rooms>
   <help>
