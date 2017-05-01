@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>setAnimatiton = false;
+canShot = true;
 </string>
           </argument>
         </arguments>
@@ -89,6 +90,12 @@ else if (keyboardRight) {
     }
 }
 else {sprite_index = spr_player; setAnimation = false;}
+
+if (keyboardUp) {
+    if (canShot) {
+        instance_create(x, y, obj_laser);
+    }
+}
 
 </string>
           </argument>
