@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>setAnimatiton = false;
+            <string>setAnimation = false;
 canShot = true;
 </string>
           </argument>
@@ -77,8 +77,9 @@ keyboardUp = keyboard_check(vk_up);
             <kind>1</kind>
             <string>if (keyboardLeft) {
     x -= 5;
-    if (!setAnimatiton){
+    if (!setAnimation){
     sprite_index = spr_player_move;
+    image_index = 0;
     setAnimation = true;
     }
 }
@@ -86,6 +87,7 @@ else if (keyboardRight) {
     x += 5;
     if (!setAnimation){
     sprite_index = spr_player_move;
+    image_index = 15; 
     setAnimation = true;
     }
 }

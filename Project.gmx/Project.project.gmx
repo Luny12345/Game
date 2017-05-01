@@ -26,10 +26,14 @@
   <objects name="objects">
     <object>objects\obj_pacMan</object>
     <object>objects\obj_collision</object>
-    <object>objects\obj_space_invaders_player</object>
     <object>objects\obj_controller</object>
-    <object>objects\obj_laser</object>
-    <object>objects\obj_spaceship1</object>
+    <objects name="space invaders">
+      <object>objects\obj_spaceship1</object>
+      <object>objects\obj_laser</object>
+      <object>objects\obj_space_invaders_player</object>
+      <object>objects\obj_wall</object>
+      <object>objects\obj_spaceship_parent</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <rooms name="Games">
