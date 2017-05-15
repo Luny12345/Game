@@ -109,6 +109,13 @@
       <sprite>sprites\spr_player_move</sprite>
       <sprite>sprites\spr_spaceship2</sprite>
       <sprite>sprites\spr_space_invaders_laser</sprite>
+      <sprite>sprites\spr_spaceship1_death</sprite>
+      <sprite>sprites\spr_spaceship2_death</sprite>
+      <sprite>sprites\spr_spaceship_UFO_death</sprite>
+      <sprite>sprites\spr_spaceship_rocket</sprite>
+      <sprite>sprites\spr_shield</sprite>
+      <sprite>sprites\spr_move_spaceship</sprite>
+      <sprite>sprites\spr_spaceship_UFO</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -162,19 +169,24 @@
       </scripts>
     </scripts>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\font0</font>
+  </fonts>
   <objects name="objects">
-    <object>objects\obj_pacMan</object>
-    <object>objects\obj_collision</object>
     <object>objects\obj_controller</object>
     <objects name="space invaders">
       <object>objects\obj_spaceship1</object>
+      <object>objects\obj_spaceship2</object>
       <object>objects\obj_laser</object>
       <object>objects\obj_space_invaders_player</object>
       <object>objects\obj_wall</object>
-      <object>objects\obj_spaceship_parent</object>
+      <object>objects\obj_spaceship1_death</object>
+      <object>objects\obj_spaceship2_death</object>
+      <object>objects\obj_spaceship_UFO_death</object>
+      <object>objects\obj_spaceship_rocket</object>
+      <object>objects\obj_spaceship_UFO</object>
+      <object>objects\obj_move_spaceship</object>
     </objects>
-    <object>objects\obj_space_invaders_player</object>
-    <object>objects\obj_controller</object>
     <objects name="TweenGMS">
       <object>objects\obj_SharedTweener</object>
     </objects>
@@ -182,13 +194,10 @@
       <object>objects\obj_pacMan</object>
       <object>objects\obj_collision</object>
     </objects>
-    <object>objects\obj_laser</object>
-    <object>objects\obj_spaceship1</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_init</room>
     <rooms name="Games">
-      <room>rooms\rm_pacMan</room>
       <room>rooms\rm_space_invaders</room>
     </rooms>
   </rooms>

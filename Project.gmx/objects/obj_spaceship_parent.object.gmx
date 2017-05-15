@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="4" ename="obj_wall">
+    <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,9 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>y += 10;
-x += 1;
-
+            <string>spd = 10;
 </string>
           </argument>
         </arguments>
